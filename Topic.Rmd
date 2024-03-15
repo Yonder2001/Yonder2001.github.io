@@ -1,0 +1,18 @@
+---
+title: "Topic"
+author: "Shuting Ouyang"
+date: '`r Sys.Date()`'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+####The topic I have finalized is "What factor is most relevant in determine country happiness level? "
+
+####I explored data sources in tidy Tuesday and Kaggle. And at last decide to use the **World Happiness Report up to 2022** data in Kaggle.
+
+```{r, eval=TRUE,echo=TRUE}
+
+```
