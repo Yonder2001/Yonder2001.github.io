@@ -1,0 +1,10 @@
+"2","Error in gsub(""`<(.*?)>`"", ""<\\1>"", deparsed, perl = TRUE) : 
+  输入的字符串33不是UTF-8
+"
+"2","Warning in sub(""\\S.*"", """", lines) :"
+"2","
+ "
+"2"," unable to translate '    paste0(format_dim, collapse = "" <c3>\u0097 "")' to a wide string
+"
+"2","Error in sub(""\\S.*"", """", lines) : input string 38 is invalid
+"

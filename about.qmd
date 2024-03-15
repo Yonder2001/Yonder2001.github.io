@@ -9,5 +9,6 @@ Here is Shuting Ouyang, planing to do an
 The data set I will be using is **World Happiness Report up to 2022**.
 
 ```{r, eval=TRUE, echo=FALSE}
-read.csv("2022.csv")
+Dataset <- read.csv("2022.csv")
+Dataset
 ```
