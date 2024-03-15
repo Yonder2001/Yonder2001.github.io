@@ -10,5 +10,6 @@ The data set I will be using is **World Happiness Report up to 2022**.
 
 ```{r, eval=TRUE, echo=FALSE}
 Dataset <- read.csv("2022.csv")
-Dataset
+library(tidyverse)
+glimpse(Dataset)
 ```
