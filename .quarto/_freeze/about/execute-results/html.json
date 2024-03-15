@@ -1,0 +1,14 @@
+{
+  "hash": "0c01b75727776bf30434f37a53d5b7a4",
+  "result": {
+    "markdown": "---\ntitle: \"About\"\n---\n\n\nWelcome to the website\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 3\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 4\n```\n:::\n:::\n\n\nData Visualization\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
