@@ -1,0 +1,14 @@
+{
+  "hash": "df2a2caaee00307ee376ddc94638d22a",
+  "result": {
+    "markdown": "---\ntitle: \"Topic\"\nauthor: \"Shuting Ouyang\"\ndate: '2024-03-19'\noutput: pdf_document\n---\n\n\n\n\n####The topic I have finalized is \"What factor is most relevant in determine country happiness level? \"\n\n####I explored data sources in tidy Tuesday and Kaggle. And at last decide to use the **World Happiness Report up to 2022** data in Kaggle.\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

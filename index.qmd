@@ -2,10 +2,13 @@
 title: "Yonder2001.github.io"
 ---
 
-This is a Quarto website.
+This is a Quarto website. #home page
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
+Try to visualize data...
+
+
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://shutingouyang.shinyapps.io/Happiness_Global/"> </iframe>
 ```

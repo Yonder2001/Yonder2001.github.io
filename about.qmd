@@ -7,12 +7,3 @@ Welcome to the website
 Here is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.
 
 The data set I will be using is **World Happiness Report up to 2022**.
-
-```{r, eval=FALSE, echo=FALSE, warning=FALSE}
-Dataset <- read.csv("2022.csv")
-library(tidyverse)
-```
-
-```{r, eval=TRUE, echo=FALSE, warning=FALSE}
-glimpse(Dataset)
-```

@@ -1,0 +1,12 @@
+name: Happiness_Global
+title: Happiness_Global
+username: shutingouyang
+account: shutingouyang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11619216
+bundleId: 8433029
+url: https://shutingouyang.shinyapps.io/Happiness_Global/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

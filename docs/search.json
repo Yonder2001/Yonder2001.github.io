@@ -4,6 +4,20 @@
     "href": "about.html",
     "title": "Webpage",
     "section": "",
-    "text": "Welcome to the website\nHere is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.\nThe data set I will be using is World Happiness Report up to 2022.\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.0     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nRows: 147\nColumns: 12\n$ RANK                                       &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, …\n$ Country                                    &lt;chr&gt; \"Finland\", \"Denmark\", \"Icel…\n$ Happiness.score                            &lt;chr&gt; \"7,821\", \"7,636\", \"7,557\", …\n$ Whisker.high                               &lt;chr&gt; \"7,886\", \"7,710\", \"7,651\", …\n$ Whisker.low                                &lt;chr&gt; \"7,756\", \"7,563\", \"7,464\", …\n$ Dystopia..1.83....residual                 &lt;chr&gt; \"2,518\", \"2,226\", \"2,320\", …\n$ Explained.by..GDP.per.capita               &lt;chr&gt; \"1,892\", \"1,953\", \"1,936\", …\n$ Explained.by..Social.support               &lt;chr&gt; \"1,258\", \"1,243\", \"1,320\", …\n$ Explained.by..Healthy.life.expectancy      &lt;chr&gt; \"0,775\", \"0,777\", \"0,803\", …\n$ Explained.by..Freedom.to.make.life.choices &lt;chr&gt; \"0,736\", \"0,719\", \"0,718\", …\n$ Explained.by..Generosity                   &lt;chr&gt; \"0,109\", \"0,188\", \"0,270\", …\n$ Explained.by..Perceptions.of.corruption    &lt;chr&gt; \"0,534\", \"0,532\", \"0,191\", …"
+    "text": "Welcome to the website\nHere is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.\nThe data set I will be using is World Happiness Report up to 2022."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yonder2001.github.io",
+    "section": "",
+    "text": "This is a Quarto website. #home page\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nTry to visualize data…"
+  },
+  {
+    "objectID": "Topic.html",
+    "href": "Topic.html",
+    "title": "Topic",
+    "section": "",
+    "text": "####The topic I have finalized is “What factor is most relevant in determine country happiness level?”\n####I explored data sources in tidy Tuesday and Kaggle. And at last decide to use the World Happiness Report up to 2022 data in Kaggle."
   }
 ]
