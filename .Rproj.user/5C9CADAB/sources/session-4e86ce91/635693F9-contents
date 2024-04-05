@@ -1,4 +1,0 @@
-#install.packages("rsconnect")
-rsconnect::setAccountInfo(name='shutingouyang', 
-                          token='C7462A900FDA63DF1D37051F6DA21497', 
-                          secret='i74l7JMsdB6V6YQ9hSbC0gt00sBz7YIhvzSfSLcq')
