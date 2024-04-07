@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "Webpage",
     "section": "",
-    "text": "Welcome to the website\nHere is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.\nThe data set I will be using is World Happiness Report up to 2022."
+    "text": "Welcome to the website\nHere is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.\nThe data set I will be using is World Happiness Report up to 2022.\n\nlibrary(shiny)"
   },
   {
     "objectID": "index.html",

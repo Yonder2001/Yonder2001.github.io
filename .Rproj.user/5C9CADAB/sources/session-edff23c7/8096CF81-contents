@@ -40,10 +40,10 @@ mapdata <- left_join(mapdata, whr2022, by=c("region"="Country"))
 mapdata_2022 <- mapdata %>% filter(!is.na(mapdata$Ladder.score)) 
 
 #Load Local Data 2023
-whr2023 <- read.csv("whr2023.csv")
+whr2023 <- read.csv("2023.csv")
 mapdata<- read.csv("mapdata.csv")
 mapdata <- left_join(mapdata, whr2023, by=c("region"="Country.name"))
-mapdata_2023 <- mapdata %>% filter(!is.na(mapdata$Happiness.score))
+mapdata_2023 <- mapdata %>% filter(!is.na(mapdata$Ladder.score))
 
 
 
