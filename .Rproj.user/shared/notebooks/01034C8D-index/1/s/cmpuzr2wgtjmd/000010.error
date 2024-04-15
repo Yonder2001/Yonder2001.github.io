@@ -1,0 +1,1 @@
+{"frames":[{"func":"ggplot(data = Summery_Factors(select(China)), aes(x = Years, \n    y = `Ladder Score`, group = Country))","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in Summery_Factors(select(China)) : 没有\"Summery_Factors\"这个函数\n"}

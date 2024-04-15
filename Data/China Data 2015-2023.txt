@@ -1,0 +1,7 @@
+Ladder Score in Years	Switzerland	Iceland	Denmark	Norway	Canada	Finland	Netherlands	Sweden	New Zealand
+2019 Ladder.score	7.48	7.494	7.6	7.554	7.278	7.769	7.488	7.343	7.307
+2020 Ladder.score	7.559899807	7.504499912	7.645599842	7.487999916	7.23210001	7.808700085	7.448900223	7.353499889	7.299600124
+2021 Ladder.score	7.571	7.554	7.62	7.392	7.103	7.842	7.464	7.363	7.277
+2022 Ladder.score	7.512	7.557	7.636	7.365	7.025	7.821	7.415	7.384	7.2
+2023 Ladder.score									
+2024 Ladder.score									

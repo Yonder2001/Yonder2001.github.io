@@ -1,0 +1,4 @@
+"0","Health_China <- ggplot(filter(Summery_Factors, Country == ""China""), "
+"0","                       aes(x = Years, y = `Health Life Expectancy`)) +"
+"0","  geom_col()"
+"0","Health_China"
