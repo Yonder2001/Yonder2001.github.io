@@ -1,9 +1,0 @@
-"0","Health_graph_China <- ggplot(data = Summery_Factors(select(China)), "
-"0","                        aes(x = Years, "
-"0","                            y = `Ladder Score`, "
-"0","                            group = Country)) +"
-"0","  geom_line(aes(color = Country)) +"
-"0","  geom_point(aes(color = Country))+ "
-"0","  scale_color_viridis_d()"
-"2","Error in Summery_Factors(select(China)) : 没有""Summery_Factors""这个函数
-"

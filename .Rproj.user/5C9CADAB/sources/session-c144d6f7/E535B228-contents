@@ -1,12 +1,20 @@
 ---
 title: "Global Happiness Level Report"
 ---
-
-```{r,echo=FALSE, Warning = FALSE}
-#Dataset 1
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+```{r load-packages, message=FALSE, echo=FALSE,Warning=FALSE}
 library(tidyverse)
 library(plotly)
 library(ggplot2)
+```
+
+```{r,echo=FALSE, Warning = FALSE}
+#Dataset 1
+
 LS_Summery <- read.csv("C:/Users/ouyangshuting/Desktop/NM2207/Yonder2001.github.io/Data/Happiness Score 2019-2024 .csv")
 
 #Tidying LS_Summery
@@ -44,53 +52,6 @@ LS_BigVariance <- LS_Summery_long %>%
   filter(variance > 0.1)
 LS_Unchange <- LS_Summery_long %>%
   filter(variance <0.003)
-
-#DataSet 2
-Full_Report_of_Factors <-read.csv("C:/Users/ouyangshuting/Desktop/NM2207/Yonder2001.github.io/Data/Final_Happiness_Score.csv")
-
-Health <- Full_Report_of_Factors[, c("Country","Health.Life.Expectancy_2019","Health.Life.Expectancy_2020","Health.Life.Expectancy_2021","Health.Life.Expectancy_2022","Health.Life.Expectancy_2023","Health.Life.Expectancy_2024")]
-
-#Tidying DATA of 6 factors
-GDP_long <- Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("GDP"), names_to = "Years", values_to = "GDP per capita")
-GDP_long <-GDP_long[,c("Country","Years","GDP per capita")]
-  
-SS_long <-Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("Social"), names_to = "Years", values_to = "Social Support")
-SS_long <-SS_long[,c("Country","Years","Social Support")]
-
-Health_long <- Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("Health"), names_to = "Years", values_to = "Health Life Expectancy")
-Health_long <-Health_long[,c("Country","Years","Health Life Expectancy")]
-
-Freedom_long <- Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("Freedom"), names_to = "Years", values_to = "Freedom in Life")
-Freedom_long <-Freedom_long[,c("Country","Years","Freedom in Life")]
-
-Generosity_long <- Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("Generosity"), names_to = "Years", values_to = "Generosity")
-Generosity_long <- Generosity_long[,c("Country","Years","Generosity")]
-
-Corroption_long <- Full_Report_of_Factors %>%
-  pivot_longer(cols = starts_with("Perceptions"), names_to = "Years", values_to = "Perceptions of corruption")
-Corroption_long <- Corroption_long[,c("Country","Years","Perceptions of corruption")]
-
-#Combine
-Summery_Factors <- bind_rows(
-  GDP_long,
-  SS_long,
-  Health_long,
-  Freedom_long,
-  Generosity_long,
-  Corroption_long
-) 
-Summery_Factors <- Summery_Factors %>%
-  mutate(Years = str_replace(Years, ".*_(\\d+)$", "\\1"))
-
-#NA omit removes NA, "." means check every row every column 
-Summery_Factors <- Summery_Factors %>% group_by(Country, Years) %>% summarise_all(~ na.omit(.))
-
-
 ```
 
 
@@ -99,7 +60,7 @@ Summery_Factors <- Summery_Factors %>% group_by(Country, Years) %>% summarise_al
 ```
 
 
-```{r}
+```{r,echo=FALSE, Warning = FALSE}
 #Draw Line Graph for big variaed country
 LS_line_graph <- ggplot(data = LS_BigVariance, 
                         aes(x = Years, 
@@ -112,7 +73,7 @@ LS_line_graph <- ggplot(data = LS_BigVariance,
 LS_line_graph_plotly <- ggplotly(LS_line_graph)
 LS_line_graph_plotly
 ```
-```{r}
+```{r,echo=FALSE, Warning = FALSE}
 
 #Draw Line graph for no chnge country 
 LS_line_graph <- ggplot(data = LS_Unchange, 
@@ -125,10 +86,9 @@ LS_line_graph <- ggplot(data = LS_Unchange,
 LS_line_graph_plotly <- ggplotly(LS_line_graph)
 LS_line_graph_plotly
 ```
-```{r}
-Health_China <- ggplot(filter(Summery_Factors, Country == "China"), 
-                       aes(x = Years, y = `Health Life Expectancy`)) +
-  geom_col()
-Health_China
+
+
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://shutingouyang.shinyapps.io/6FactorsExplained/"> </iframe>
 ```
 
