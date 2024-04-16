@@ -1,26 +1,26 @@
 {
-    "id": "00525327",
+    "id": "7EE1B20B",
     "path": "C:/Users/ouyangshuting/Desktop/NM2207/Yonder2001.github.io/personal_app2/app.R",
     "project_path": "personal_app2/app.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1713247357148.0,
+    "created": 1713253570166.0,
     "source_on_save": false,
-    "relative_order": 6,
+    "relative_order": 7,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "3,10",
-        "scrollLine": "0"
+        "cursorPosition": "74,0",
+        "scrollLine": "60"
     },
     "folds": "",
     "lastKnownWriteTime": 1713250233,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1713250233677,
+    "last_content_update": 1713250233,
     "read_only": false,
     "read_only_alternatives": []
 }
