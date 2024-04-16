@@ -1,11 +1,14 @@
 ---
 title: "How Happiness level change during Covid Period, and what factors are affecting the most?"
 ---
+
+```{=html}
 <style>
   h1 {
     text-align: center;
   }
 </style>
+```
 ```{r load-packages, message=FALSE, echo=FALSE,Warning=FALSE}
 library(tidyverse)
 library(plotly)
@@ -53,11 +56,43 @@ LS_BigVariance <- LS_Summery_long %>%
 LS_Unchange <- LS_Summery_long %>%
   filter(variance <0.003)
 ```
+<center><small> Shuting Ouyang E1329489 </small></center>
+<br>
+<div style="text-align: justify;">
+<p>Gallup, the Oxford Wellbeing Research Centre, the UN Sustainable Development Solutions Network, and the WHR's Editorial Board collaborated to produce the Happiness Report starting in 2012. The level of happiness can serve as an indicator of a country's effectiveness in providing social benefits and understanding its citizens’ sentiments (Helliwell, 2021). Moreover, it is positively correlated with citizens’ health and their willingness to engage in prosocial behaviors (Siedlecki et al., 2014). Consequently, Resolution 65/309, sponsored by Bhutan, calls upon other countries to consider the growth of happiness as an integral part of development.
+<br>
+When discussing development, examining variations in happiness levels during global events can be informative to understand how each country copes with them. One significant global event in recent years is the coronavirus pandemic, which began in 2019 and generally saw countries easing lockdowns around 2023. We will focus on this period and attempt to analyze which of the six factors are influencing countries with significant variations during this time.
+</p>
+
+<h3>Variation</h3>
+<p>First, let’s examine an overview from 2019 to 2023.</p>
 
 
 ```{=html}
 <iframe height="400" width="100%" frameborder="no" src="https://shutingouyang.shinyapps.io/Happiness_Global/"> </iframe>
 ```
+
+We can see the happiness score is surprisingly stable, besides Argentina at the bottom left, other countries did not seem to follow any pattern with COVID-19’s influence.
+
+It might be because the happiness score is calculated by the Gallup World Poll, which asks participants to imagine their possible life. If participants realize everyone else is in the same problem, it is possible for them to feel the same as before. It is noticeable that the countries with the most stable happiness scores (variance <0.003) are mostly above 6, the lowest about 4.
+
+```{r,echo=FALSE, Warning = FALSE}
+
+#Draw Line graph for no chnge country 
+LS_line_graph <- ggplot(data = LS_Unchange, 
+                        aes(x = Years, 
+                            y = `Ladder Score`, 
+                            group = Country)) +
+  geom_line(aes(color = Country)) +
+  geom_point(aes(color = Country))+ scale_color_viridis_d()
+
+LS_line_graph_plotly <- ggplotly(LS_line_graph)
+LS_line_graph_plotly
+```
+
+In fact, the countries with top happiness score are generally very stable. For Example, Finland, the top line in the graph above, is already being the top 1 for 7 years in a row includes 2024.
+ 
+Then, what is happening on the counties with biggest variation over these years? 
 
 
 ```{r,echo=FALSE, Warning = FALSE}
@@ -73,22 +108,25 @@ LS_line_graph <- ggplot(data = LS_BigVariance,
 LS_line_graph_plotly <- ggplotly(LS_line_graph)
 LS_line_graph_plotly
 ```
-```{r,echo=FALSE, Warning = FALSE}
 
-#Draw Line graph for no chnge country 
-LS_line_graph <- ggplot(data = LS_Unchange, 
-                        aes(x = Years, 
-                            y = `Ladder Score`, 
-                            group = Country)) +
-  geom_line(aes(color = Country)) +
-  geom_point(aes(color = Country))+ scale_color_viridis_d()
+Armenia, China, Lebanon, Pakistan, Afghanistan, Bangladesh, Sierra Leone, Benin, Ghana experience variation bigger than 0.1. In these countries, only Armenia and China experienced an increase trend, while most countries getting lower Happiness Score over these years. 
 
-LS_line_graph_plotly <- ggplotly(LS_line_graph)
-LS_line_graph_plotly
-```
-
-
+<h3>Which Factor is more affective?</h3>
 ```{=html}
 <iframe height="400" width="100%" frameborder="no" src="https://shutingouyang.shinyapps.io/6FactorsExplained/"> </iframe>
 ```
 
+From the graph above we can see the top 3 factors: GDP, Social Support, and Health Life expectancy are more powerful in explaining the countries’ happiness score than the bottom two factors: Generosity, and Trust in Organization. While, Freedom is a factor has different importance across countries when evaluating country’s happiness level. This also hold True for countries with least variations (Shiny graph at the end). 
+
+In general, Armenia and China share a very similar trend. They both has increasing GDP, Social Support, Perceived Freedom and decreasing perceived health life expectancy. The only significant difference is that, China experienced an increase trend of generosity while Armenia experienced a decrease trend of generosity. However, since generosity is not given too much value in explaining Happiness level, it does not make a significant difference.  
+
+For the countries have the biggest decrease in general happiness score, three of them (Lebanon, Bangladesh, Benin) tend to show a descending trend in Perceived Social Support even after Covid ended. While the other three (Ghana, Pakistan, Sierra Leone) although had a rapid fall in 2020 in perceived social support, but it start to raise in nearest 2 years. 
+
+
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://shutingouyang.shinyapps.io/personal_app3/"> </iframe>
+```
+<h3>Conclusion </h3>
+After comparing the graphs, let’s go back to our question. As mentioned before, GDP, Social Support, and Health Life expectancy are the most powerful 3 factors to explain the change of happiness level. Happiness level stays generally persistent over the covid period, and the biggest variation group mostly experienced a decreasing trend in both happiness score and perception of social support. Amenia and China are the only two has increased happiness score, although both has decrease health life expectancy (one of the best explanatory factors), they both has increased GDP and percived Social Support.
+
+</div>

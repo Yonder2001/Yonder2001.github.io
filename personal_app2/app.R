@@ -53,7 +53,9 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput("Country",
                   "Choice of Country",
-                  choices = c("China", "Armenia", "Lebanon","Switzerland"), 
+                  choices = c("China", "Armenia", "Lebanon",
+                              "Pakistan","Afghanistan","Bangladesh",
+                              "Sierra Leone","Benin","Ghana"), 
                   selected = "China")
     ),
     
@@ -80,38 +82,44 @@ server <- function(input, output) {
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `GDP per capita`)) +
       geom_col()+
-      labs(title = paste("Explained by GDP"))
+      labs(title = paste("Explained by GDP"))+
+      ylim(0, 1.6)
   })
   output$Social <- renderPlot({
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `Social Support`)) +
       geom_col()+
-      labs(title = paste("Explained by Social Support"))
+      labs(title = paste("Explained by Social Support"))+
+      ylim(0, 1.6)
   })
   output$Health <- renderPlot({
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `Health Life Expectancy`)) +
       geom_col()+
-      labs(title = paste("Explained by Health"))
+      labs(title = paste("Explained by Health"))+
+      ylim(0, 1.6)
   })
   
   output$Freedom <- renderPlot({
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `Freedom in Life`)) +
       geom_col()+
-      labs(title = paste("Explained by Freedom"))
+      labs(title = paste("Explained by Freedom"))+
+      ylim(0, 1.6)
   })
   output$Generosity <- renderPlot({
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `Generosity`)) +
       geom_col()+
-      labs(title = paste("Explained by Generosity"))
+      labs(title = paste("Explained by Generosity"))+
+      ylim(0, 1.6)
   })
   output$Corruption <- renderPlot({
     ggplot(filter(Summery_Factors, Country == input$Country), 
            aes(x = Years, y = `Perceptions of corruption`)) +
       geom_col()+
-      labs(title = paste("Explained by Trust in Organization"))
+      labs(title = paste("Explained by Trust in Organization"))+
+      ylim(0, 1.6)
   })
   
 }

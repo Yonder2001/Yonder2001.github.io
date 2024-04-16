@@ -5,7 +5,7 @@ account: shutingouyang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11769612
-bundleId: 8499420
+bundleId: 8499878
 url: https://shutingouyang.shinyapps.io/6FactorsExplained/
 version: 1
 asMultiple: FALSE

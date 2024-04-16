@@ -1,7 +1,7 @@
 ---
 title: "Data Set Introduction"
 ---
-
+<center><small> Shuting Ouyang E1329489 </small></center>
 <center><small><em>The data set is <strong>World Happiness Report</strong> from Kaggle.</em></small></center>
 
 <br>
@@ -26,6 +26,6 @@ title: "Data Set Introduction"
   <li>Perceptions of corruption/Trust in organization comes from 2 questions: "<strong>Is corruption widespread throughout the government or not?</strong>" and "<strong>Is corruption widespread within businesses or not?</strong>". 1= Trust, 0 = No Trust.</li>
 </ol>
 
-<p>Then, these 6 factors data will adjust to a factor which set the lowest average score ever get in the survey to 0.</p>
+<p>Then, these 6 factors data will adjust to a factor which set the lowest average score ever get in the survey to 0. Each year's data would be a representation of the previous year, for example, the 2024 data, is actually analyzing 2023</p>
 
 <p>More detailed information can be found in "<em>World Happiness Report 2024 Chapter 2 Appendix 1</em>".</p>
