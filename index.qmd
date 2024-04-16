@@ -1,5 +1,5 @@
 ---
-title: "Global Happiness Level Report"
+title: "How Happiness level change during Covid Period, and what factors are affecting the most?"
 ---
 <style>
   h1 {

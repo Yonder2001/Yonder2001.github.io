@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yonder2001.github.io - Data Set Introduction</title>
+<title>Data Report - Data Set Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Yonder2001.github.io</span>
+    <span class="navbar-title">Data Report</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -117,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">Visualisation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
@@ -157,11 +123,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Here is Shuting Ouyang, planing to do an investigation on relevant factors related to happiness level.</p>
-<p>The data set I will be using is <strong>World Happiness Report up to 2022</strong> from Kaggle.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<small><em>The data set is <strong>World Happiness Report</strong> from Kaggle.</em></small>
+</center>
+<br>
+<div style="text-align: justify;">
+<p>
+Global Happiness Report reviews Happiness data from 2012 to now. It collects about 1000 reply every year from about 130~150 countries. The Happiness Ranking based on <strong>The Gallup World Poll</strong> score averaged in the nearest 3 years. This Poll ask participants to imagine their best and poorest possible life, then answer where are they at, giving a score 0, the worst, to 10, the best.
+</p>
+<p>
+Then the happiness report analysis the happiness data with 6 indicators. They are GDP per capita, perceived social support, health life expectancy, freedom in life, generosity and perception of corruption.
+</p>
 </div>
+<small><em>
+<center>
+*Please Note: These are not factors deciding the Happiness level (aka Ladder Score), these are factors we explore to identify their relationship with Happiness level.
+</center>
+</em></small><p><small><em></em></small></p>
+<ol>
+<li>
+GDP is calculated using Purchasing Power Parity (PPP) and World Development Indicators (WDI).
+</li>
+<br>
+<li>
+Health Life Expectancy came from World Health Organization (WHO) and WDI.
+</li>
+<br>
+<li>
+Social Support comes from this question: “<strong>If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?</strong>” 1 = Have , 0 = Don’t have.
+</li>
+<br>
+<li>
+Freedom in Life comes from this question: “<strong>“Are you satisfied or dissatisfied with your freedom to choose what you do with your life?”</strong>” 1 = Satisfied, 0 = Not Satisfied.
+</li>
+<br>
+<li>
+Generosity comes from this question: “<strong>Have you donated money to a charity in the past month</strong>?” 1 = Yes, 0 = No.
+</li>
+<br>
+<li>
+Perceptions of corruption/Trust in organization comes from 2 questions: “<strong>Is corruption widespread throughout the government or not?</strong>” and “<strong>Is corruption widespread within businesses or not?</strong>”. 1= Trust, 0 = No Trust.
+</li>
+</ol>
+<p>
+Then, these 6 factors data will adjust to a factor which set the lowest average score ever get in the survey to 0.
+</p>
+<p>
+More detailed information can be found in “<em>World Happiness Report 2024 Chapter 2 Appendix 1</em>”.
+</p>
 
 
 
